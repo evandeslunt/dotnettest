@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>MVCMusic Store Roles</h2>
+
+<hr />
+<ol>
+    @foreach (var role in Model)
+    {
+        <li>@Html.ActionLink(role.Name, "UsersInRole", new { name = role.Name})</li>
+    }
+</ol>
